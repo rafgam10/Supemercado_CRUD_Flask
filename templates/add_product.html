@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Adicionar Produto</title>
+</head>
+<body>
+    <h1>Adicionar Produto</h1>
+    <form action="{{ url_for('add_product') }}" method="post">
+        Nome: <input type="text" name="nome"><br>
+        Categoria: <input type="text" name="categoria"><br>
+        Preço: <input type="text" name="preco"><br>
+        Quantidade: <input type="text" name="quantidade"><br>
+        <input type="submit" value="Adicionar">
+    </form>
+    <a href="{{ url_for('index') }}">Voltar à lista de produtos</a>
+</body>
+</html>
